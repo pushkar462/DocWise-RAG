@@ -3,8 +3,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# ── Groq (check Streamlit secrets first, then .env) ────
+try:
+    import streamlit as st
+    GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY"))
+except:
+    GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+
 # ── Groq (free, fast) ──────────────────────────────────
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 # ── Embedding (local, free — runs on your machine) ─────
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
