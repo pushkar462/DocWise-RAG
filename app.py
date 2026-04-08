@@ -34,9 +34,21 @@ st.markdown("""
     }
 
     /* ── Sidebar ───────────────────────────────────────── */
+    /* ── Force light theme everywhere ──────────────────── */
+    .stApp, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
+        background-color: #f8f9fa !important;
+        color: #1a1a2e !important;
+    }
     section[data-testid="stSidebar"] {
-        background-color: #ffffff;
+        background-color: #ffffff !important;
         border-right: 1px solid #e9ecef;
+    }
+    section[data-testid="stSidebar"] * {
+        color: #1a1a2e !important;
+    }
+    section[data-testid="stSidebar"] .stSlider label,
+    section[data-testid="stSidebar"] .stMarkdown {
+        color: #1a1a2e !important;
     }
 
     /* ── Header ────────────────────────────────────────── */
