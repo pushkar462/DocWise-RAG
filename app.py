@@ -308,7 +308,7 @@ with st.sidebar:
 st.markdown("""
 <div class="main-header">
     <h1>📚 Multi-Doc Q&A Chatbot</h1>
-    <p>Upload documents and ask questions — powered by LangChain, FAISS & GPT-4o</p>
+    <p>Upload documents and ask questions — powered by LangChain, FAISS & Groq</p>
 </div>
 """, unsafe_allow_html=True)
 
